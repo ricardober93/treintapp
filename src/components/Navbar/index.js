@@ -22,10 +22,10 @@ return (
         </div>
         <div className="Navbar_links">
             <Link to="/" >
-                <a href className="link">Mapa</a>
+                <a href="true" className="link">Mapa</a>
             </Link>
             <Link to="/nosotros" >
-                <a href className="link">Nosotros</a>
+                <a href="true" className="link">Nosotros</a>
             </Link>
             <button onClick={handleClick} > Cerrar Sesión</button>
         </div>

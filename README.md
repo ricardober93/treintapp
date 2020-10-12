@@ -18,4 +18,4 @@ Las tenologias utilizadas son
 
 ### Demo
 
-
+La aplicacion web se puede en [demo](https://treintapp.vercel.app/)

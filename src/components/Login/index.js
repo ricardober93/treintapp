@@ -22,6 +22,7 @@ export default function Login() {
         user && history.push("/")
     }, [user,history])
 
+    console.log(user)
     return (
         <section className="login">
             <div className="login_container-60">
