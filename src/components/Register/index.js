@@ -46,7 +46,7 @@ export default function Register() {
                             <button className="register_button_iniciar" >Iniciar Sesión</button>
                         </div>
                          <div className="form_bottom">
-                        <p>¿No tienes cuenta? <strong className="strong"> Registrate </strong> </p>
+                        <p>¿Tienes cuenta? <strong className="strong"> Inicia Sesión </strong> </p>
                     </div>
                     </form>
                 </section>
