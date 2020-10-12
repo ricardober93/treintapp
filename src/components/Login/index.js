@@ -1,7 +1,27 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Logo from 'svg/Logo'
 import './login.css'
+import {
+    loginWithGoogle
+} from 'firebase/client'
+import useUser  from "hook/useUser";
+import { useHistory } from "react-router-dom";
+
 export default function Login() {
+    const user = useUser()
+    const history = useHistory()
+    
+    const handleClick = (e) => {
+        e.preventDefault()
+        loginWithGoogle().catch((err) => {
+            console.log(err)
+        })
+    }   
+
+    useEffect(() => {
+        user && history.push("/")
+    }, [user,history])
+
     return (
         <section className="login">
             <div className="login_container-60">
@@ -28,22 +48,22 @@ export default function Login() {
                         <p>Miles de Micros y pequeñas empresas confian en Treinta</p>
                         <div className="login_form_group">
                             <label>Correo Electronico</label>
-                            <input type="text" name="" id=""/>
+                            <input type="text"/>
                         </div>
                         <div className="login_form_group">
                             <label>Password</label>
-                            <input type="password" name="" id=""/>
+                            <input type="password"/>
                         </div>
                         <div className="login_form_group">
                             <button className="login_button_iniciar" >Iniciar Sesión</button>
                         </div>
                         <span>o continuar con</span>
                         <div className="login_form_group">
-                            <button className="login_button_google" >Iniciar con Google</button>
+                            <button className="login_button_google"  onClick={handleClick} >Iniciar con Google</button>
                         </div>
                          <div className="form_bottom">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Diam nisi dui sit tellus, eget pretium dui.</p>
-                        <p>¿No tienes cuenta? <strong className="strong"> Registrate </strong> </p>
+                        <p>¿No tienes cuenta? <strong className="strong" onClick={()=> history.push('/register')} > Registrate </strong> </p>
                     </div>
                     </form>
                 </section>

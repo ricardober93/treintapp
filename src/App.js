@@ -1,16 +1,24 @@
 import React from 'react';
 import './App.css';
-import { Route } from "wouter";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import { routes } from 'routes';
 function App() {
   return (
-    <div className="App">
-      {
-        routes.map(({ path, component }) => (
-          <Route path={path} component={component } />
-        ))
-       }
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+        {
+          routes.map(({ path, component, exact }, i) => (
+            <Route key={i} path={path} exact={exact} component={component } />
+          ))
+          }
+        </Switch>
+        </div>
+    </Router>
   );
 }
 

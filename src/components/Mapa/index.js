@@ -2,17 +2,19 @@ import React, { useState } from 'react'
 import { Map, TileLayer, Marker, Popup } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { locations } from 'locations/location'
+import Navbar from 'components/Navbar/index'
 
 
 export default function Mapa() {
     const DEFAULT_VIEWPORT = {
         center: [4.6552768, -74.1144458,15],
-        zoom: 15,
+        zoom: 17,
     }
     
     const [location] = useState(DEFAULT_VIEWPORT)
     return (
-        <div>
+        <div className="MapView">
+            <Navbar />
             <Map
                 viewport={location}
             >

@@ -1,0 +1,42 @@
+.footer {
+    background-color: #FFBC25;
+}
+
+.footer section {
+    display: flex;
+    flex-direction: row;
+    padding: 2em 3em;
+    font-size: 12px;
+    color: 333333;
+}
+
+.footer_grid-70 {
+    width: 70%;
+}
+
+.footer_grid_links {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #333333;
+    margin: 12px 0;
+}
+
+.footer_grid_links a {
+    text-decoration: none;
+    color: #333333;
+}
+
+.footer_grid_30 {
+    width: 30%;
+}
+
+.footer_grid_30 p {
+    margin-bottom: 12px;
+}
+
+.download>img {
+    width: 135px;
+}

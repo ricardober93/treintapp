@@ -4,9 +4,87 @@ div.App,
 html,
 body,
 #root {
-    padding: 0;
-    margin: 0;
-    height: 100%;
-    background-color: #FFBC25;
-    font-family: 'Roboto', sans-serif !important;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.MapView,
+#root,
+.leaflet-container {
+  height: 100%;
+}
+
+
+/* Nosotros */
+.nosotros_hover {
+  margin: 0;
+  padding: 2em;
+}
+
+.nosotros_hover h1 {
+  font-size: 62px;
+  text-align: center;
+  margin-bottom: .2em;
+}
+
+.nosotros_hover_googleplay {
+  display: flex;
+  place-content: center;
+  place-self: center;
+}
+
+.nosotros_hover_demo {
+  margin-top: 2em;
+  display: flex;
+  place-content: center;
+  place-self: center;
+  position: relative;
+}
+
+.nosotros_hover_demo>img.demo {
+  height: 300px;
+}
+
+.nosotros_hover_demo>img.circle {
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}
+
+.nosotros_feature h2 {
+  font-size: 36px;
+  width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: .2em;
+}
+
+.nosotros_feature_grid {
+  display: grid;
+  grid-template-rows: repeat(2);
+  padding: 4em;
+  gap: 3em;
+}
+
+.nosotros_feature_grid_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.nosotros_feature_grid_block:last-child {
+  justify-content: space-evenly !important;
+}
+
+.block_feature {
+  text-align: center;
+  width: 30%;
+}
+
+.block_feature h4,
+p {
+  margin: .3em 0;
 }
